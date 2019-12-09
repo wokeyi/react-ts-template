@@ -52,6 +52,7 @@ const getStyleLoaders = (isModule: boolean): webpack.RuleSetUse => {
 const config: webpack.Configuration = {
   mode: 'production',
   devtool: false,
+  bail: true,
   stats: 'normal',
   entry: {
     app: utils.resolve('src/index.tsx'),
@@ -79,9 +80,31 @@ const config: webpack.Configuration = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
+        loader: 'babel-loader',
         options: {
-          transpileOnly: true,
+          plugins: [
+            '@babel/plugin-proposal-class-properties',
+            [
+              '@babel/plugin-transform-runtime',
+              {
+                helpers: true,
+                regenerator: true,
+                useESModules: false
+              }
+            ]
+          ],
+          presets: [
+            '@babel/preset-react',
+            '@babel/preset-env',
+            [
+              '@babel/preset-typescript',
+              {
+                isTSX: true,
+                allExtensions: true,
+                allowNamespaces: false,
+              }
+            ],
+          ],
         }
       },
       {
@@ -160,7 +183,7 @@ const config: webpack.Configuration = {
       name: true,
       cacheGroups: {
         vonders: {
-          test: /node_modules/,
+          test: /[\\/]node_modules[\\/]/,
           name: 'vonders',
           priority: 10,
         },
