@@ -5,6 +5,8 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 import TsconfigPathsWebpackPlugin from 'tsconfig-paths-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 
+import '@types/webpack-dev-server'
+
 process.env.NODE_ENV = 'development'
 
 const envVariables = utils.getEnvVariables()
