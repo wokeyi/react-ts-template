@@ -14,7 +14,7 @@ export function getEnvVariables() {
 
     return {
       'process.env': lines.reduce((variables, line) => {
-        if (line.startsWith('APP_')) {
+        if (line.includes('APP_')) {
           const [key, value] = line.split('=')
           variables[key] = JSON.stringify(value)
         }

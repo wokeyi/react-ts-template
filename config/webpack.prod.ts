@@ -1,7 +1,6 @@
 import * as webpack from 'webpack'
 import * as utils from './utils'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
-import WorkboxWebpackPlugin from 'workbox-webpack-plugin'
 import HTMLWebpackPlugin from 'html-webpack-plugin'
 import OptimizeCSSAssetsPlugin from 'optimize-css-assets-webpack-plugin'
 import ForkTsCheckerPlugin from 'fork-ts-checker-webpack-plugin'
@@ -151,16 +150,6 @@ const config: webpack.Configuration = {
         to: utils.resolve('dist'),
       }
     ]),
-    new WorkboxWebpackPlugin.GenerateSW({
-      clientsClaim: true,
-      exclude: [/\.map$/, /asset-manifest\.json$/, /index.html$/],
-      importWorkboxFrom: 'local',
-      navigateFallback: '/index.html',
-      navigateFallbackBlacklist: [
-        new RegExp('^/_'),
-        new RegExp('/[^/]+\\.[^/]+$'),
-      ],
-    })
   ],
   optimization: {
     minimizer: [
