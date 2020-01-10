@@ -1,0 +1,18 @@
+{
+  "name": "react-ts-template",
+  "author": "wokeyi",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "server-renderer dev",
+    "build": "server-renderer build",
+    "start": "server-renderer start"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "server-renderer": "^0.5.6-alpha"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.17"
+  }
+}

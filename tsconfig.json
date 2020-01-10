@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "src",
+    "jsx": "react",
+    "module": "ESNext",
+    "target": "ES5",
+    "moduleResolution": "Node",
+    "noUnusedLocals": true,
+    "allowJs": false,
+    "checkJs": false,
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "importHelpers": true,
+    "lib": ["DOM", "ES2015"],
+    "typeRoots": [
+      "node_modules/@types",
+      "tslib",
+      "images.d.ts"
+    ]
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "ssr.config.js"
+  ]
+}
