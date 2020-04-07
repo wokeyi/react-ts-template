@@ -1,18 +1,18 @@
 import * as React from 'react'
 import { AppProps } from 'server-renderer'
 
-interface IAppProps extends AppProps {
-  error: string
+interface IAppProps {
+  error?: string
 }
 
-const App: React.FC<IAppProps> = ({
-  Component, error, ...pageProps
+const App: React.FC<AppProps<IAppProps>> = ({
+  Component, pageProps,
 }) => {
   if (Component) {
     return <Component {...pageProps}/>
   }
   return (
-    <div>{error}</div>
+    <div>{pageProps.error}</div>
   )
 }
 

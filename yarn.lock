@@ -710,6 +710,12 @@
   dependencies:
     estree-walker "^0.6.1"
 
+"@types/cheerio@^0.22.15":
+  version "0.22.17"
+  resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.17.tgz#e54f71c3135f71ebc16c8dc62edad533872c9e72"
+  dependencies:
+    "@types/node" "*"
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
@@ -718,9 +724,17 @@
   version "0.0.42"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.42.tgz#8d0c1f480339efedb3e46070e22dd63e0430dd11"
 
+"@types/history@^4.7.3":
+  version "4.7.5"
+  resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.5.tgz#527d20ef68571a4af02ed74350164e7a67544860"
+
 "@types/node@*":
   version "13.1.6"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.1.6.tgz#076028d0b0400be8105b89a0a55550c86684ffec"
+
+"@types/node@^12.12.21":
+  version "12.12.34"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.34.tgz#0a5d6ae5d22612f0cf5f10320e1fc5d2a745dcb8"
 
 "@types/prop-types@*":
   version "15.7.3"
@@ -729,6 +743,19 @@
 "@types/q@^1.5.1":
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
+
+"@types/react-dom@^16.9.4":
+  version "16.9.6"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-16.9.6.tgz#9e7f83d90566521cc2083be2277c6712dcaf754c"
+  dependencies:
+    "@types/react" "*"
+
+"@types/react@*":
+  version "16.9.32"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.32.tgz#f6368625b224604148d1ddf5920e4fefbd98d383"
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^2.2.0"
 
 "@types/react@^16.9.17":
   version "16.9.17"
@@ -4596,6 +4623,12 @@ postcss-replace-overflow-wrap@^3.0.0:
   dependencies:
     postcss "^7.0.2"
 
+postcss-safe-parser@^4.0.1:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-safe-parser/-/postcss-safe-parser-4.0.2.tgz#a6d4e48f0f37d9f7c11b2a581bf00f8ba4870b96"
+  dependencies:
+    postcss "^7.0.26"
+
 postcss-selector-matches@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/postcss-selector-matches/-/postcss-selector-matches-4.0.0.tgz#71c8248f917ba2cc93037c9637ee09c64436fcff"
@@ -4670,6 +4703,14 @@ postcss-values-parser@^2.0.0, postcss-values-parser@^2.0.1:
 postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.16, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.23, postcss@^7.0.25, postcss@^7.0.5, postcss@^7.0.6:
   version "7.0.26"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.26.tgz#5ed615cfcab35ba9bbb82414a4fa88ea10429587"
+  dependencies:
+    chalk "^2.4.2"
+    source-map "^0.6.1"
+    supports-color "^6.1.0"
+
+postcss@^7.0.26:
+  version "7.0.27"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.27.tgz#cc67cdc6b0daa375105b7c424a85567345fc54d9"
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
@@ -5220,9 +5261,9 @@ serialize-javascript@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-2.1.2.tgz#ecec53b0e0317bdc95ef76ab7074b7384785fa61"
 
-server-renderer@^0.5.6-alpha:
-  version "0.5.6-alpha"
-  resolved "https://registry.yarnpkg.com/server-renderer/-/server-renderer-0.5.6-alpha.tgz#a52b07ddae0633fb42589932356f1fdfef7d9c8c"
+server-renderer@^0.6.11-alpha:
+  version "0.6.11-alpha"
+  resolved "https://registry.yarnpkg.com/server-renderer/-/server-renderer-0.6.11-alpha.tgz#43f4b68dd97296895aa68ea0404aefbe730f6dc1"
   dependencies:
     "@babel/core" "^7.7.7"
     "@babel/plugin-proposal-class-properties" "^7.7.4"
@@ -5231,6 +5272,11 @@ server-renderer@^0.5.6-alpha:
     "@babel/preset-react" "^7.7.4"
     "@babel/preset-typescript" "^7.7.7"
     "@rollup/plugin-typescript" "^2.0.1"
+    "@types/cheerio" "^0.22.15"
+    "@types/history" "^4.7.3"
+    "@types/node" "^12.12.21"
+    "@types/react" "^16.9.17"
+    "@types/react-dom" "^16.9.4"
     babel-loader "^8.0.6"
     chalk "^3.0.0"
     cheerio "^1.0.0-rc.3"
@@ -5251,6 +5297,7 @@ server-renderer@^0.5.6-alpha:
     postcss-flexbugs-fixes "^4.1.0"
     postcss-loader "^3.0.0"
     postcss-preset-env "^6.7.0"
+    postcss-safe-parser "^4.0.1"
     react-dev-utils "^10.0.0"
     rollup "^1.27.13"
     rollup-plugin-uglify "^6.0.4"

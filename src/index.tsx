@@ -4,6 +4,6 @@ import routes from './routes'
 
 render({
   container: '#root',
-  App: App as any,
+  App,
   routes,
 })
